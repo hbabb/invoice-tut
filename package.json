@@ -2,25 +2,47 @@
   "name": "invoice-tut",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": "Heath Babb",
+  "repository": "https://github.com/hbabb/invoice-tut",
+  "type": "module",
+  "browser list": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "git": "git config --local core.hooksPath .githooks"
   },
   "dependencies": {
+    "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "react-dom": "19.0.0-rc-66855b96-20241106"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^9",
+    "eslint-config-next": "15.0.3",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5"
   }
 }
