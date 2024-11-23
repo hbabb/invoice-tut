@@ -14,7 +14,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="mx-auto my-auto flex h-full max-w-5xl flex-col justify-center gap-6 text-center">
+    <main className="mx-auto flex h-full max-w-7xl flex-col justify-center gap-6 text-center flex-1 border-2 border-purple-400">
       <h1 className="text-5xl font-bold">Dashboard</h1>
 
       <Table>
