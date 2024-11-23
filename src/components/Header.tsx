@@ -11,7 +11,7 @@ import { ModeToggle } from "./ModeToggle";
 
 const Header = () => {
   return (
-    <header className="mb-4 sticky top-0 z-10 border-2 border-orange-500">
+    <header className="mb-4 sticky top-0 z-10">
       <Container>
         <div className="flex items-center justify-between gap-4 border-b-2 border-slate-400 py-2">
           <div className="flex items-center gap-4 ml-4">
