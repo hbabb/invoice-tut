@@ -9,7 +9,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { cn } from "@/lib/utils";
 import { CirclePlus } from "lucide-react";
 import Link from "next/link";
 
@@ -17,46 +16,29 @@ export default function Home() {
   return (
     <main className="mx-auto flex h-full max-w-7xl flex-col justify-center gap-6 text-center my-12 flex-1 border-2 border-purple-400">
       <div className="flex justify-between">
-        <h1 className="text-3xl font-bold">
-          Invoices
-        </h1>
+        <h1 className="text-3xl font-bold">Invoices</h1>
 
         <p>
-          <Button
-            variant="ghost"
-            className="inline-flex gap-2"
-            asChild
-          >
+          <Button variant="ghost" className="inline-flex gap-2" asChild>
             <Link href="/invoices/new">
               <CirclePlus className=" h-4 w-4" />
               Create Invoice
             </Link>
           </Button>
         </p>
-
       </div>
 
       <Table>
-        <TableCaption>
-          A list of your recent invoices.
-        </TableCaption>
+        <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead className="w-[100px] text-left font-bold p-4">
               Date
             </TableHead>
-            <TableHead className="text-left font-bold p-4">
-              Customer
-            </TableHead>
-            <TableHead className="text-left font-bold p-4">
-              Email
-            </TableHead>
-            <TableHead className="text-center font-bold p-4">
-              Status
-            </TableHead>
-            <TableHead className="text-right font-bold p-4">
-              Amount
-            </TableHead>
+            <TableHead className="text-left font-bold p-4">Customer</TableHead>
+            <TableHead className="text-left font-bold p-4">Email</TableHead>
+            <TableHead className="text-center font-bold p-4">Status</TableHead>
+            <TableHead className="text-right font-bold p-4">Amount</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>

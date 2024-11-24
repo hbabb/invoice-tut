@@ -1,8 +1,8 @@
+import { Button } from "@/components/ui/button";
+import { MoveLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import spaceMan from "../../public/images/SpaceMan.svg";
-import { Button } from "@/components/ui/button";
-import { MoveLeft } from "lucide-react";
 
 export const metadata = {
   title: "Page Not Found",
