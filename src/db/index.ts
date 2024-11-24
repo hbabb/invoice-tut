@@ -4,12 +4,12 @@ import { Pool } from "pg";
 import { Customers, Invoices } from "@/db/schema";
 
 const pool = new Pool({
-    connectionString: process.env.XATA_DATABASE_URL,
-    max: 20,
+  connectionString: process.env.XATA_DATABASE_URL,
+  max: 20,
 });
 export const db = drizzle(pool, {
-    schema: {
-        Invoices,
-        Customers,
-    },
+  schema: {
+    Invoices,
+    Customers,
+  },
 });

@@ -1,5 +1,5 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -27,8 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html 
-        lang="en" 
+      <html
+        lang="en"
         suppressHydrationWarning
         className="scroll-smooth min-h-screen bg-background text-foreground flex flex-col"
       >
@@ -41,7 +41,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-              {children}
+            {children}
           </ThemeProvider>
         </body>
       </html>

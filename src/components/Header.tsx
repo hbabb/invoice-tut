@@ -1,11 +1,5 @@
 import Container from "@/components/Container";
-import {
-  OrganizationSwitcher,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 
@@ -34,7 +28,6 @@ const Header = () => {
             </SignedIn>
             <ModeToggle />
           </div>
-          
         </div>
       </Container>
     </header>

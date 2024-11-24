@@ -1,10 +1,22 @@
-'use client';
+"use client";
 
-import { useFormContext } from 'react-hook-form';
+import { useFormContext } from "react-hook-form";
 
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 type DataObj = {
   id: string;
@@ -18,7 +30,12 @@ type Props<S> = {
   className?: string;
 };
 
-export function SelectWithLabel<S>({ fieldTitle, nameInSchema, data, className }: Props<S>) {
+export function SelectWithLabel<S>({
+  fieldTitle,
+  nameInSchema,
+  data,
+  className,
+}: Props<S>) {
   const form = useFormContext();
 
   return (
@@ -33,7 +50,10 @@ export function SelectWithLabel<S>({ fieldTitle, nameInSchema, data, className }
 
           <Select {...field} onValueChange={field.onChange}>
             <FormControl>
-              <SelectTrigger id={nameInSchema} className={`w-full max-w-xs ${className}`}>
+              <SelectTrigger
+                id={nameInSchema}
+                className={`w-full max-w-xs ${className}`}
+              >
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
             </FormControl>

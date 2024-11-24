@@ -1,10 +1,15 @@
-'use client';
+"use client";
 
-import { useFormContext } from 'react-hook-form';
+import { useFormContext } from "react-hook-form";
 
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+} from "@/components/ui/form";
 
-import { Checkbox } from '@/components/ui/checkbox';
+import { Checkbox } from "@/components/ui/checkbox";
 
 type Props<S> = {
   fieldTitle: string;
@@ -12,7 +17,11 @@ type Props<S> = {
   message: string;
 };
 
-export function CheckboxWithLabel<S>({ fieldTitle, nameInSchema, message }: Props<S>) {
+export function CheckboxWithLabel<S>({
+  fieldTitle,
+  nameInSchema,
+  message,
+}: Props<S>) {
   const form = useFormContext();
 
   return (
@@ -27,7 +36,12 @@ export function CheckboxWithLabel<S>({ fieldTitle, nameInSchema, message }: Prop
 
           <div className="flex items-center gap-2">
             <FormControl>
-              <Checkbox id={nameInSchema} {...field} checked={field.value} onCheckedChange={field.onChange} />
+              <Checkbox
+                id={nameInSchema}
+                {...field}
+                checked={field.value}
+                onCheckedChange={field.onChange}
+              />
             </FormControl>
             {message}
           </div>
